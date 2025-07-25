@@ -19,9 +19,9 @@ public class splash_screen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
         // 👇 Add this block for the Next button
-        Button nextButton = findViewById(R.id.nextButton);
-        nextButton.setOnClickListener(v -> {
-            Intent intent = new Intent(splash_screen.this, MainActivity.class);
+        Button getStartedBtn = findViewById(R.id.getStartedBtn);
+        getStartedBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(splash_screen.this, login_Activity.class);
             startActivity(intent);
             finish(); // Optional: closes splash screen activity
         });
