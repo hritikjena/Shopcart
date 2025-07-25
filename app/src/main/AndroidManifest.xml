@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Shopcart">
         <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
             android:name=".login_Activity"
             android:exported="false" />
         <activity
