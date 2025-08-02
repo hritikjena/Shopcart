@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:background="#0B0F1F">
 
-
     <TextView
         android:id="@+id/appHeader"
         android:layout_width="wrap_content"
@@ -38,6 +37,7 @@
         android:layout_marginHorizontal="32dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF" />
@@ -60,6 +60,7 @@
         android:layout_marginHorizontal="32dp">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
