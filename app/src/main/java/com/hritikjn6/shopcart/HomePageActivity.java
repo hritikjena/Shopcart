@@ -1,24 +1,50 @@
 package com.hritikjn6.shopcart;
 
 import android.os.Bundle;
+import android.view.ViewGroup;
+import android.widget.GridLayout;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.view.Gravity;
+import android.view.View;
+import android.graphics.Color;
+import android.widget.Toast;
+import android.view.ViewGroup;
+import android.view.Gravity;
+import android.graphics.Color;
+import android.widget.LinearLayout;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class HomePageActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home_page);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        LinearLayout catElectronics = findViewById(R.id.catElectronics);
+        LinearLayout catFashion = findViewById(R.id.catFashion);
+        LinearLayout catHome = findViewById(R.id.catHome);
+        LinearLayout catBooks = findViewById(R.id.catBooks);
+
+        catElectronics.setOnClickListener(v -> {
+            Toast.makeText(this, "Electronics clicked", Toast.LENGTH_SHORT).show();
+            // startActivity(new Intent(this, ElectronicsActivity.class));
+        });
+
+        catFashion.setOnClickListener(v -> {
+            Toast.makeText(this, "Fashion clicked", Toast.LENGTH_SHORT).show();
+        });
+
+        catHome.setOnClickListener(v -> {
+            Toast.makeText(this, "Home clicked", Toast.LENGTH_SHORT).show();
+        });
+
+        catBooks.setOnClickListener(v -> {
+            Toast.makeText(this, "Books clicked", Toast.LENGTH_SHORT).show();
         });
     }
 }
