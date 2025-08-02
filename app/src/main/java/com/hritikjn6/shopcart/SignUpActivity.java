@@ -33,5 +33,8 @@ public class SignUpActivity extends AppCompatActivity {
             startActivity(intent);
             finish(); // close signup page if needed
         });
+        Intent intent = new Intent(SignUpActivity.this, HomePageActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
